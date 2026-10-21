@@ -16,12 +16,12 @@
 
 Estimado Javier,
 
-En atención a tu manifestación expresa de **retomar las operaciones y el escalamiento del proyecto La Lupa News**, y habiendo concertado la adquisición y puesta en marcha del nuevo dominio oficial **`somoslalupanews.com`**, presento a continuación el informe de **Conciliación de Cartera, Estado de Cuenta y Liquidación de Honorarios Profesionales**.
+En atención a tu manifestación expresa de **retomar las operaciones y el escalamiento del proyecto La Lupa News**, y habiendo concertado la adquisición y puesta en marcha del nuevo dominio oficial **`somoslalupanews.com`** a través de **GoDaddy**, presento a continuación el informe de **Conciliación de Cartera, Estado de Cuenta y Liquidación de Honorarios Profesionales**.
 
 1. **Tarifa Mensual Aprobada:** Conforme a la *Propuesta de Valor: Servicios de Desarrollo y Escalabilidad Tecnológica*, se pactó una tarifa mensual de honorarios de **DOS MILLONES QUINIENTOS MIL PESOS M/CTE ($2.500.000 COP)** por concepto de soporte técnico integral, administración de servidores, desarrollo de funcionalidades, arquitectura editorial y monitoreo continuo.
 2. **Abonos Verificados:**
    - **Abono de Honorarios Profesionales:** **$2.000.000 COP** recibido el 9 de Octubre de 2026.
-   - **Fondo de Dominio e Infraestructura (`somoslalupanews.com`):** **$200.000 COP** recibido el 21 de Octubre de 2026.
+   - **Fondo de Dominio en GoDaddy (`somoslalupanews.com`):** **$200.000 COP** recibido el 21 de Octubre de 2026.
 
 ---
 
@@ -42,7 +42,7 @@ Bajo los estándares de auditoría financiera de Nomack Studio (anclaje matemát
 * **Total Honorarios Causados:** $5.000.000 COP
 * **Total Abono a Honorarios Recibido:** $2.000.000 COP *(09/10/2026)*
 * **SALDO LÍQUIDO EXIGIBLE DE HONORARIOS:** **$3.000.000 COP** *(Tres millones de pesos M/CTE)*.
-* **Fondo de Dominio:** Recibido $200.000 COP (Costo NameBright: $11 USD / ~$46.000 COP, dejando un saldo remanente a favor de infraestructura de +$154.000 COP).
+* **Fondo Dominio GoDaddy:** Recibido $200.000 COP (Costo GoDaddy: ~$50.000 COP, dejando un saldo remanente a favor de infraestructura de +$150.000 COP).
 
 Para dar inicio a las labores técnicas de puesta en producción sobre `somoslalupanews.com`, se proponen dos alternativas de normalización:
 
