@@ -1,0 +1,23 @@
+# Nomack Studio — .gitignore para La Lupa News
+# Seguridad y Privacidad (ISO 27001)
+
+# Backups pesados de servidor
+05_Servidor_Backups/backups_cpanel/
+*.tar
+*.tar.gz
+*.zip
+*.rar
+
+# Credenciales sensibles en texto plano
+05_Servidor_Backups/accesos_restringidos/*.txt
+05_Servidor_Backups/accesos_restringidos/*.xlsx
+
+# Archivos multimedia muy pesados (>10MB)
+*.mp4
+*.mov
+
+# Entornos y temporales
+node_modules/
+.env
+.DS_Store
+Thumbs.db

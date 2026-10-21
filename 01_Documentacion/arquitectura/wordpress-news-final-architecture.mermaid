@@ -1,0 +1,70 @@
+graph TB
+    subgraph Frontend["Frontend (Capa de Presentación)"]
+        A[Header Sticky] --> A1[Logo]
+        A --> A2[Menú Principal]
+        A --> A3[Buscador]
+        A --> A4[Dark/Light Mode]
+        
+        B[Homepage] --> B1[Breaking News Slider]
+        B --> B2[Grid Noticias Principal]
+        B --> B3[Sidebar Widgets]
+        B --> B4[Secciones Destacadas]
+        
+        C[Páginas de Categoría] --> C1[Lista de Artículos]
+        C --> C2[Filtros]
+        C --> C3[Paginación Ajax]
+        
+        D[Single Post] --> D1[Contenido Enriquecido]
+        D --> D2[Artículos Relacionados]
+        D --> D3[Comentarios]
+        D --> D4[Social Share]
+    end
+
+    subgraph Backend["Backend (WordPress + Plugins)"]
+        E[Core WordPress] --> E1[Custom Post Types]
+        E --> E2[Taxonomías]
+        E --> E3[Roles & Permisos]
+        
+        F[Elementor Pro] --> F1[Templates]
+        F --> F2[Theme Builder]
+        F --> F3[Popup Builder]
+        
+        G[Caché & Optimización] --> G1[WP Rocket]
+        G --> G2[Redis Object Cache]
+        G --> G3[Imagify]
+        
+        H[SEO & Analytics] --> H1[Yoast SEO Premium]
+        H --> H2[GA4 Integration]
+        H --> H3[Search Console]
+    end
+
+    subgraph Database["Base de Datos"]
+        I[Optimización] --> I1[Índices]
+        I --> I2[Relaciones]
+        I --> I3[Caché]
+        
+        J[Tablas Custom] --> J1[Meta Posts]
+        J --> J2[Analytics]
+        J --> J3[Cache]
+    end
+
+    subgraph Infrastructure["Infraestructura"]
+        K[Local] --> K1[XAMPP]
+        K --> K2[Git]
+        K --> K3[VS Code]
+        
+        L[Producción] --> L1[PHP 8.1+]
+        L --> L2[MariaDB]
+        L --> L3[Nginx/Apache]
+        L --> L4[SSL]
+    end
+
+    subgraph Security["Seguridad"]
+        M[Wordfence] --> M1[Firewall]
+        M --> M2[Malware Scan]
+        M --> M3[Login Security]
+        
+        N[Backups] --> N1[UpdraftPlus]
+        N --> N2[Database Backup]
+        N --> N3[Files Backup]
+    end
