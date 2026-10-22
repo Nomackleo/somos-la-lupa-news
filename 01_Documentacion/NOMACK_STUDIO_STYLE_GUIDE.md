@@ -4,6 +4,10 @@
 **Versión:** 2.0 — Octubre 2026  
 **Ámbito:** Documentos ejecutivos, dictámenes técnicos, auditorías financieras y propuestas comerciales.
 
+> [!IMPORTANT]
+> **Manual Oficial y Canónico para La Lupa News**:  
+> Para todos los entregables, reportes, propuestas y manuales de **La Lupa News** (destinados a su CEO **Javier Fernández Franco**), el estándar vinculante y prioritario es el **[Manual de Estética y UI Documental — La Lupa News](01_gobernanza/manual_estetica_y_ui_documental_la_lupa_news.md)**, con paleta Morado Marca Personal (`#2d124d`) y Dorado Institucional (`#b8842a`), y autoría institucional exclusiva de **Leonel Salcedo — Dirección y Consultoría Tecnológica**.
+
 ---
 
 ## 1. Filosofía de Diseño: Cadena Documental de Alta Autoridad

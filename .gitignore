@@ -1,4 +1,28 @@
-# Nomack Studio — .gitignore para La Lupa News
+# ==============================================================================
+# GITIGNORE — PROYECTO LA LUPA NEWS
+# ==============================================================================
+
+# OS & System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary & Log files
+*.tmp
+*.bak
+*.log
+
+# Antigravity Scratch & Temporary Artifacts
+scratch/
+artifacts/
+.gemini/
+
 # Seguridad y Privacidad (ISO 27001)
 
 # Backups pesados de servidor
@@ -16,8 +40,6 @@
 *.mp4
 *.mov
 
-# Entornos y temporales
+# Entornos y dependencias
 node_modules/
 .env
-.DS_Store
-Thumbs.db
