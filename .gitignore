@@ -1,11 +1,12 @@
 # ==============================================================================
-# GITIGNORE — PROYECTO LA LUPA NEWS
+# GITIGNORE — PROYECTO LA LUPA NEWS (ISO/IEC 27001:2022 & NOMACK STUDIO v4.0.0)
 # ==============================================================================
 
 # OS & System Files
 .DS_Store
 Thumbs.db
 desktop.ini
+*.lnk
 
 # Editors & IDEs
 .vscode/
@@ -13,33 +14,71 @@ desktop.ini
 *.swp
 *~
 
-# Temporary & Log files
+# Temporary, Cache & Log files
 *.tmp
 *.bak
 *.log
+__pycache__/
+*.pyc
+*.pyo
 
 # Antigravity Scratch & Temporary Artifacts
 scratch/
 artifacts/
 .gemini/
 
-# Seguridad y Privacidad (ISO 27001)
+# SQLite WAL / Shared Memory Sidecars (keep canonical knowledge/project_memory.sqlite tracked)
+*.sqlite-wal
+*.sqlite-shm
 
-# Backups pesados de servidor
-05_Servidor_Backups/backups_cpanel/
+# ==============================================================================
+# SEGURIDAD, SECRETOS Y PRIVACIDAD (ISO/IEC 27001:2022 A.8.12 / LEY 1581/2012)
+# ==============================================================================
+.secrets/
+*.pem
+*.key
+*.cert
+*.crt
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+auth.json
+*.token
+*.apikey
+*pass*.txt
+*password*
+wp-config.php
+
+# ==============================================================================
+# BACKUPS DE SERVIDOR Y DUMPS DE BASE DE DATOS (PROHIBIDOS EN GIT)
+# ==============================================================================
+backups/
+05_Servidor_Backups/
+*.sql
+*.sql.gz
 *.tar
 *.tar.gz
 *.zip
 *.rar
+*.7z
 
-# Credenciales sensibles en texto plano
-05_Servidor_Backups/accesos_restringidos/*.txt
-05_Servidor_Backups/accesos_restringidos/*.xlsx
-
-# Archivos multimedia muy pesados (>10MB)
+# ==============================================================================
+# BINARIOS MULTIMEDIA Y FUENTES EDITABLES PESADAS (>10 MB / DISEÑO CRUDO)
+# ==============================================================================
 *.mp4
 *.mov
+*.avi
+*.mkv
+*.psd
+*.ai
+*.indd
 
 # Entornos y dependencias
 node_modules/
-.env
+.venv/
+venv/
+
+# Documentación vendor de terceros (ThemeForest JNews)
+web/themes/Documentation/

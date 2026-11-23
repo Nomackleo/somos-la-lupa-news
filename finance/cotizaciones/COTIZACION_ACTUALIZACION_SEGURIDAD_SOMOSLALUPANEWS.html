@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización Oficial de Ciberseguridad y Parcheo Web — La Lupa News</title>
+  <style>
+    :root {
+      --primary-purple: #2d124d;
+      --deep-purple: #220d3a;
+      --accent-gold: #b8842a;
+      --gold-light: #fef7ec;
+      --text-main: #222222;
+      --text-secondary: #777777;
+      --border-color: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --bg-canvas: #f8fafc;
+      --bg-card: #ffffff;
+      --badge-critical: #ba1650;
+      --badge-success: #056c5c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cambria', 'Georgia', serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg-canvas);
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Fixed Top Action Bar */
+    .top-action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, var(--deep-purple) 0%, var(--primary-purple) 100%);
+      color: #ffffff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(45, 18, 77, 0.25);
+      border-bottom: 2px solid var(--accent-gold);
+    }
+
+    .top-action-bar .brand-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Calibri', 'Segoe UI', sans-serif;
+    }
+
+    .top-action-bar .brand-pill {
+      background-color: var(--accent-gold);
+      color: #ffffff;
+      font-size: 9pt;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .top-action-bar .title-text {
+      font-size: 11pt;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .top-action-bar .btn-group {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-download-docx {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent-gold);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Calibri', 'Segoe UI', sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-download-docx:hover {
+      background-color: #a07222;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn-audit-report {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Calibri', 'Segoe UI', sans-serif;
+      font-size: 9.5pt;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-audit-report:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Document Sheet Container */
+    .document-wrapper {
+      max-width: 920px;
+      margin: 36px auto;
+      background-color: var(--bg-card);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .document-page {
+      padding: 56px 64px;
+      position: relative;
+    }
+
+    /* Page Break for Print */
+    .page-break {
+      page-break-before: always;
+      border-top: 1px dashed var(--border-color);
+      margin: 40px 0;
+      position: relative;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+      }
+      .top-action-bar {
+        display: none !important;
+      }
+      .document-wrapper {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+      }
+      .document-page {
+        padding: 40px 48px;
+      }
+      .page-break {
+        border: none;
+        margin: 0;
+      }
+    }
+
+    /* ==========================================
+       PORTADA DE 9 NIVELES
+       ========================================== */
+    .cover-page {
+      text-align: center;
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 72px 48px;
+    }
+
+    .cover-top-header {
+      font-family: 'Calibri', sans-serif;
+      font-size: 10pt;
+      font-weight: 800;
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cover-category {
+      font-family: 'Calibri', sans-serif;
+      font-size: 13pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    .cover-title {
+      font-family: 'Calibri', sans-serif;
+      font-size: 23pt;
+      font-weight: 800;
+      color: var(--primary-purple);
+      line-height: 1.25;
+      margin-bottom: 24px;
+      max-width: 780px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Calibri', sans-serif;
+      font-size: 12.5pt;
+      font-style: italic;
+      color: #666666;
+      max-width: 700px;
+      margin-bottom: 48px;
+      line-height: 1.4;
+    }
+
+    .cover-presented-label {
+      font-family: 'Calibri', sans-serif;
+      font-size: 10pt;
+      font-weight: 800;
+      color: var(--accent-gold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .cover-recipient-name {
+      font-family: 'Calibri', sans-serif;
+      font-size: 18pt;
+      font-weight: 800;
+      color: var(--primary-purple);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cover-recipient-role {
+      font-family: 'Calibri', sans-serif;
+      font-size: 12pt;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 48px;
+    }
+
+    .cover-divider {
+      width: 140px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+      margin: 0 auto 24px auto;
+    }
+
+    .cover-metadata {
+      font-family: 'Calibri', sans-serif;
+      font-size: 10pt;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .cover-metadata strong {
+      color: var(--primary-purple);
+      font-weight: 700;
+    }
+
+    /* ==========================================
+       PÁGINAS INTERIORES & ENCABEZADOS
+       ========================================== */
+    .inner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 8px;
+      margin-bottom: 32px;
+      font-family: 'Calibri', sans-serif;
+    }
+
+    .inner-header-left {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .inner-header-right {
+      font-size: 8.5pt;
+      color: var(--text-secondary);
+      text-align: right;
+    }
+
+    .inner-footer {
+      border-top: 1px solid #cccccc;
+      padding-top: 12px;
+      margin-top: 48px;
+      font-family: 'Calibri', sans-serif;
+      font-size: 8.5pt;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Headings */
+    h2.section-heading {
+      font-family: 'Calibri', sans-serif;
+      font-size: 15pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+      margin-top: 32px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    h2.section-heading .num {
+      color: var(--accent-gold);
+      font-weight: 800;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, transparent 100%);
+      margin-bottom: 16px;
+    }
+
+    h3.subsection-heading {
+      font-family: 'Calibri', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    p strong {
+      color: var(--primary-purple);
+    }
+
+    /* Alert / Callout Boxes */
+    .callout-box {
+      background-color: #fdfaf6;
+      border-left: 4px solid var(--accent-gold);
+      border-top: 1px solid #f1e5d1;
+      border-right: 1px solid #f1e5d1;
+      border-bottom: 1px solid #f1e5d1;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+    }
+
+    .callout-title {
+      font-family: 'Calibri', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: var(--primary-purple);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-content {
+      font-size: 10.5pt;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* Tables */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 9.5pt;
+      background-color: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .custom-table th {
+      background-color: var(--primary-purple);
+      color: #ffffff;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 9.5pt;
+      letter-spacing: 0.3px;
+      border-bottom: 2px solid var(--accent-gold);
+    }
+
+    .custom-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .custom-table tr:nth-child(even) td {
+      background-color: var(--bg-canvas);
+    }
+
+    .custom-table tr:hover td {
+      background-color: #f5f2f9;
+    }
+
+    .custom-table tr.highlight-row td {
+      background-color: #fefaf3 !important;
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .custom-table td.price-cell {
+      font-family: 'Calibri', sans-serif;
+      font-size: 11pt;
+      font-weight: 800;
+      color: var(--accent-gold);
+      text-align: center;
+      white-space: nowrap;
+      background-color: var(--gold-light);
+    }
+
+    .custom-table td.term-cell {
+      font-family: 'Calibri', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    .table-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Calibri', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-recommended {
+      background-color: var(--accent-gold);
+      color: #ffffff;
+    }
+
+    .badge-tactical {
+      background-color: var(--primary-purple);
+      color: #ffffff;
+    }
+
+    .badge-capital {
+      background-color: #4a227a;
+      color: #ffffff;
+    }
+
+    /* Strategy Grid Cards */
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .strategy-card {
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 18px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-tactical {
+      border-top: 3px solid var(--accent-gold);
+    }
+
+    .card-structural {
+      border-top: 3px solid var(--primary-purple);
+    }
+
+    .strategy-card h4 {
+      font-family: 'Calibri', sans-serif;
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+      margin-bottom: 8px;
+    }
+
+    .strategy-card p {
+      font-size: 9.5pt;
+      line-height: 1.45;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .strategy-card ul {
+      margin-left: 18px;
+      font-size: 9pt;
+      line-height: 1.45;
+      color: #333;
+    }
+
+    .strategy-card ul li {
+      margin-bottom: 4px;
+    }
+
+    /* Banking Grid */
+    .bank-card {
+      background: linear-gradient(135deg, #fdfaf6 0%, #f7f1e6 100%);
+      border: 1px solid #e8d9bf;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .bank-item-label {
+      font-family: 'Calibri', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+    }
+
+    .bank-item-value {
+      font-family: 'Calibri', sans-serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+    }
+
+    /* Signatures */
+    .signatures-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+      padding-top: 24px;
+    }
+
+    .sig-line {
+      border-bottom: 1.5px solid var(--accent-gold);
+      margin-bottom: 12px;
+    }
+
+    .sig-name {
+      font-family: 'Calibri', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--primary-purple);
+    }
+
+    .sig-title {
+      font-family: 'Calibri', sans-serif;
+      font-size: 9pt;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .hl-gold {
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    .hl-purple {
+      color: var(--primary-purple);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Action Bar with DOCX Download Link -->
+  <header class="top-action-bar">
+    <div class="brand-info">
+      <span class="brand-pill">Oficial</span>
+      <span class="title-text">La Lupa News — Cotización Escalonada de Ciberseguridad &amp; Parcheo Web</span>
+    </div>
+    <div class="btn-group">
+      <a href="../../01_Documentacion/auditoria/INFORME_TECNICO_AUDITORIA_SEGURIDAD_LA_LUPA_NEWS.md" target="_blank" class="btn-audit-report" title="Ver Dictamen Técnico Pericial Completo">
+        📄 Ver Auditoría Pericial
+      </a>
+      <a href="COTIZACION_ACTUALIZACION_SEGURIDAD_SOMOSLALUPANEWS.docx" download="COTIZACION_ACTUALIZACION_SEGURIDAD_SOMOSLALUPANEWS.docx" class="btn-download-docx" title="Descargar documento formal en formato Microsoft Word (.docx)">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+        </svg>
+        Descargar DOCX Formal
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Document Wrapper -->
+  <main class="document-wrapper">
+
+    <!-- ==========================================
+         NIVEL 1 A 9: PORTADA INSTITUCIONAL
+         ========================================== -->
+    <section class="document-page cover-page">
+      <div class="cover-top-header">LA LUPA NEWS — ESTRATEGIA DIGITAL Y TECNOLOGÍA</div>
+      <div class="cover-category">PROPUESTA COMERCIAL &amp; PLAN ESCALONADO DE INTERVENCIÓN</div>
+      
+      <h1 class="cover-title">
+        COTIZACIÓN DE SERVICIOS: ACTUALIZACIÓN TÁCTICA, REMEDIACIÓN DE VULNERABILIDADES Y BLINDAJE WEB
+      </h1>
+
+      <div class="cover-subtitle">
+        Portal Digital somoslalupanews.com — Modelos Flexibles: Fase Semilla "Investor-Ready" y Planes de Continuidad Estructural
+      </div>
+
+      <div class="cover-presented-label">PRESENTADO A:</div>
+      <div class="cover-recipient-name">JAVIER FERNÁNDEZ FRANCO</div>
+      <div class="cover-recipient-role">CEO — La Lupa News</div>
+
+      <div class="cover-divider"></div>
+
+      <div class="cover-metadata">
+        Presentado por: <strong>Leonel Salcedo</strong> | Dirección y Consultoría Tecnológica<br>
+        Fecha de Emisión: <strong>Octubre de 2026</strong> | Estado: <strong>Versión Oficial Aprobada</strong><br>
+        Referencia de Auditoría: <em>Dictamen Forense somoslalupanews.com</em> | Código: <strong>PROP-2026-LLN-SEC02</strong>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- ==========================================
+         PÁGINAS INTERIORES
+         ========================================== -->
+    <div class="document-page">
+
+      <!-- Header Interior -->
+      <div class="inner-header">
+        <div class="inner-header-left">LA LUPA NEWS | Cotización de Ciberseguridad Web &amp; Servidores</div>
+        <div class="inner-header-right">Confidencial — Uso Exclusivo de Dirección General</div>
+      </div>
+
+      <!-- SECCIÓN 1 -->
+      <h2 class="section-heading"><span class="num">1.</span> Presentación Ejecutiva y Enfoque de Acompañamiento Estratégico</h2>
+      <hr class="section-divider">
+
+      <p>
+        Estimado <strong>Javier</strong>,
+      </p>
+
+      <p>
+        Comprendiendo a cabalidad el momento decisivo en el que se encuentra <strong>La Lupa News</strong>, enfocado activamente en la 
+        <strong>atracción de inversión, patrocinadores estratégicos e inyección de capital</strong> para apalancar el escalamiento del medio, 
+        el portal oficial <strong>somoslalupanews.com</strong> constituye el activo central y la carta de presentación más determinante 
+        ante evaluadores, inversionistas y socios comerciales.
+      </p>
+
+      <p>
+        En una ronda de inversión o reunión corporativa, si un inversionista intenta evaluar el medio desde una red corporativa o bancaria 
+        y se encuentra con el mensaje de bloqueo perimetral de <em>FortiGuard (Access Blocked: Newly Registered Domain)</em>, o si detecta 
+        enlaces rotos hacia páginas de parqueo de dominios, la credibilidad del activo se degrada instantáneamente.
+      </p>
+
+      <p>
+        Conscientes de este contexto y con el propósito de ofrecer un <strong>esquema de colaboración altamente cercano, amigable y flexible</strong>, 
+        sin que ello signifique regalar la ingeniería pericial ni comprometer los estándares profesionales, hemos diseñado una 
+        <strong>propuesta en dos niveles estratégicos</strong> para que tú decidas el momento financiero en que ejecutas cada fase:
+      </p>
+
+      <div class="strategy-grid">
+        <div class="strategy-card card-tactical">
+          <h4>Nivel 1: Planes Tácticos "Investor-Ready"</h4>
+          <p><strong>Diseñados para la fase actual de consecución de capital (Inversión &lt; $600.000 COP):</strong></p>
+          <ul>
+            <li>Eliminan el bloqueo corporativo de FortiGuard para que los inversionistas puedan abrir la web sin trabas.</li>
+            <li>Corrigen los registros DNS y desvían el tráfico del dominio histórico.</li>
+            <li>Parchean de inmediato las brechas críticas de ejecución remota (RCE) y cierran la fuga de usuarios.</li>
+            <li>Dejan la plataforma presentable, navegable y digna para vender y defender el proyecto.</li>
+          </ul>
+        </div>
+
+        <div class="strategy-card card-structural">
+          <h4>Nivel 2: Planes Estructurales de Continuidad</h4>
+          <p><strong>Diseñados para la fase posterior de capitalización y escalamiento:</strong></p>
+          <ul>
+            <li>Remediación pericial completa de las 93 vulnerabilidades (Core 6.9.9 a 7.1.3 + plugins).</li>
+            <li>Hardening profundo de PHP, servidor LiteSpeed, Security Headers y cron jobs.</li>
+            <li>Entorno Staging extendido para pruebas de regresión visual en tema JNews.</li>
+            <li>Póliza de soporte continuo y monitoreo 24/7 para garantizar alta concurrencia sin riesgo de caída.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <div class="callout-title">
+          💡 FILOSOFÍA GANAR-GANAR: AMIGABLES CON TU FLUJO DE CAJA HOY, COMPROMETIDOS CON TU ESCALABILIDAD MAÑANA
+        </div>
+        <div class="callout-content">
+          Si decides comenzar hoy con el <strong>Plan Táctico B ($580.000 COP)</strong> para presentar el proyecto a inversionistas, 
+          <strong>te otorgamos una Garantía de Escalabilidad:</strong> durante los siguientes 45 días, el 100% de ese valor se abonará 
+          como parte de pago si decides dar el salto al Plan de Remediación Integral ($3.600.000 COP) una vez ingrese el capital. 
+          Así no duplicas gastos y aseguras la operatividad inmediata de tu medio.
+        </div>
+      </div>
+
+      <!-- SECCIÓN 2 -->
+      <h2 class="section-heading"><span class="num">2.</span> Estructura Tarifaria y Matriz de Opciones</h2>
+      <hr class="section-divider">
+
+      <p>
+        A continuación se expone la matriz comparativa de alternativas, desde la solución básica y ultra accesible de pitch, 
+        hasta el blindaje integral definitivo:
+      </p>
+
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Nivel / Modalidad</th>
+            <th style="width: 45%;">Alcance y Componentes Incluidos</th>
+            <th style="width: 14%; text-align: center;">Plazo</th>
+            <th style="width: 16%; text-align: center;">Inversión (COP)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Táctico A -->
+          <tr>
+            <td>
+              <span class="table-badge badge-tactical">NIVEL 1: PITCH BÁSICO</span><br>
+              <strong style="color: var(--primary-purple); font-size: 10pt;">Plan Desbloqueo &amp; DNS</strong><br>
+              <span style="font-size: 8.5pt; color: #666;">(Mínimo para Demostración)</span>
+            </td>
+            <td>
+              • Respaldo de seguridad esencial previo (código + base de datos MySQL).<br>
+              • <strong>Trámite pericial de recategorización ante Fortinet FortiGuard</strong> para levantar el veto corporativo/bancario a <code>somoslalupanews.com</code>.<br>
+              • Corrección y alineación de registros DNS en GoDaddy y Hostinger.<br>
+              • <strong>Redirección 301 canónica</strong> del dominio histórico <code>lalupanews.com</code> (desvinculación del parqueo en ParkLogic).<br>
+              • Reemplazo en base de datos de las 10 URLs residuales rotas.<br>
+              • Verificación de certificado SSL/HTTPS funcional.
+            </td>
+            <td class="term-cell">
+              2 a 3<br>días hábiles
+            </td>
+            <td class="price-cell">
+              $380.000<br>
+              <span style="font-size: 8pt; font-weight: normal; color: #555;">COP (Pago contado)</span>
+            </td>
+          </tr>
+
+          <!-- Táctico B -->
+          <tr class="highlight-row">
+            <td>
+              <span class="table-badge badge-recommended">RECOMENDADO RONDAS</span><br>
+              <strong style="color: var(--primary-purple); font-size: 10pt;">Plan "Investor-Ready" &amp; BMV</strong><br>
+              <span style="font-size: 8.5pt; color: #666;">(Blindaje Mínimo Viable)</span>
+            </td>
+            <td>
+              • <strong>Todo lo incluido en el Plan Desbloqueo &amp; DNS ($380.000)</strong>.<br>
+              • <strong>Parcheo de choque de brechas críticas RCE</strong> y subida arbitraria de archivos en plugins de formularios (Forminator) y constructores.<br>
+              • <strong>Bloqueo estricto de fuga de identidades</strong> en REST API (<code>/wp-json/wp/v2/users</code>), evitando que atacantes enumeren redactores/admins.<br>
+              • Aplicación de parche menor de seguridad en WordPress Core.<br>
+              • Protección básica contra ataques de fuerza bruta en <code>wp-login.php</code>.<br>
+              • Entrega de checklist de validación para reuniones de inversión.
+            </td>
+            <td class="term-cell">
+              3 a 4<br>días hábiles
+            </td>
+            <td class="price-cell">
+              $580.000<br>
+              <span style="font-size: 8pt; font-weight: normal; color: #555;">COP (Pago contado)<br><em>&lt; $600.000 COP</em></span>
+            </td>
+          </tr>
+
+          <!-- Estructural A -->
+          <tr>
+            <td>
+              <span class="table-badge badge-capital">NIVEL 2: CAPITALIZACIÓN</span><br>
+              <strong style="color: var(--primary-purple); font-size: 10pt;">Remediación Integral Llave en Mano</strong><br>
+              <span style="font-size: 8.5pt; color: #666;">(Post-Inyección de Capital)</span>
+            </td>
+            <td>
+              • Ejecución total de las <strong>4 Fases Técnicas</strong> de ciberseguridad forense.<br>
+              • <strong>Mitigación exhaustiva de las 93 vulnerabilidades documentadas</strong> (WordPress Core 6.9.9 a 7.1.3 + los 8 plugins críticos).<br>
+              • Respaldo forense de 726 MB y clonación en entorno <strong>Staging aislado</strong>.<br>
+              • Endurecimiento completo de servidor y PHP (<code>php.ini</code>, cookies seguras, <code>log_errors</code>).<br>
+              • Inyección de <strong>Security Headers completos</strong> (HSTS, CSP, X-Frame-Options, etc.).<br>
+              • Configuración de Cron Jobs en crontab de Hostinger.<br>
+              • Entrega de <em>Informe Pericial Final de Remediación y Certificación de Parcheo</em>.
+            </td>
+            <td class="term-cell">
+              7 a 10<br>días hábiles
+            </td>
+            <td class="price-cell">
+              $3.600.000<br>
+              <span style="font-size: 8pt; font-weight: normal; color: #555;">COP (50% anticipo / 50% entrega)</span>
+            </td>
+          </tr>
+
+          <!-- Estructural B -->
+          <tr>
+            <td>
+              <span class="table-badge badge-capital">NIVEL 3: CONTINUIDAD</span><br>
+              <strong style="color: var(--primary-purple); font-size: 10pt;">Plan Integral + Póliza DevSecOps</strong><br>
+              <span style="font-size: 8.5pt; color: #666;">(Operatividad y Monitoreo 24/7)</span>
+            </td>
+            <td>
+              • <strong>Todo lo incluido en la Remediación Integral ($3.600.000)</strong>.<br>
+              • <strong>Monitoreo activo de ciberseguridad 24/7</strong> durante noventa (90) días calendario.<br>
+              • Mantenimiento y actualización preventiva mensual de CMS y plugins.<br>
+              • Copias de seguridad automáticas externas semanales con verificación periódica.<br>
+              • Optimización continua de velocidad con LiteSpeed Cache y Memcached.<br>
+              • Soporte técnico prioritario con tiempo de respuesta inferior a 4 horas.
+            </td>
+            <td class="term-cell">
+              3 Meses<br>(90 días)
+            </td>
+            <td class="price-cell">
+              $5.400.000<br>
+              <span style="font-size: 8pt; font-weight: normal; color: #555;">COP Trimestre<br>(o $3.000.000 + 2 cuotas de $1.200.000)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="background-color: #f1f5f9; padding: 10px 16px; border-radius: 6px; font-size: 9.5pt; margin-bottom: 20px;">
+        <strong style="color: var(--primary-purple);">Tarifa de Consultoría Adicional / Horas de Desarrollo a Demanda:</strong> 
+        $150.000 COP / hora (tarifa preferencial para La Lupa News frente a la tarifa senior corporativa de $180.000 COP).
+      </div>
+
+      <!-- SECCIÓN 3 -->
+      <h2 class="section-heading"><span class="num">3.</span> Delimitación Responsable del Alcance Técnico</h2>
+      <hr class="section-divider">
+
+      <p>
+        Para mantener la transparencia técnica que caracteriza nuestra consultoría, es fundamental delimitar con claridad el alcance de cada opción:
+      </p>
+
+      <p>
+        <span class="hl-gold">1. Planes Tácticos ($380.000 / $580.000 COP):</span> Constituyen un <strong>tratamiento quirúrgico de emergencia y presentación comercial</strong>. Su objetivo es que el sitio esté en línea, que los evaluadores de inversión no choquen contra la alerta roja de FortiGuard en sus oficinas, y que atacantes oportunistas no desfiguren el home durante una reunión de negocios. <em>No constituyen una solución integral de blindaje de servidor ni resuelven la totalidad de las 93 vulnerabilidades</em>, pero otorgan una ventana de oxígeno comercial indispensable para captar fondos.
+      </p>
+
+      <p>
+        <span class="hl-purple">2. Planes Estructurales ($3.600.000 / $5.400.000 COP):</span> Representan la <strong>ingeniería definitiva de infraestructura</strong>. Una vez asegurada la inyección de capital, esta intervención audita cada tabla de la base de datos de 726 MB, refactoriza plugins, blinda el servidor Hostinger y activa una póliza de continuidad para que el medio crezca en visitas publicitarias con cero riesgo de colapso.
+      </p>
+
+      <!-- SECCIÓN 4 -->
+      <h2 class="section-heading"><span class="num">4.</span> Condiciones Comerciales y Política de Pago</h2>
+      <hr class="section-divider">
+
+      <ul style="margin-left: 20px; line-height: 1.6; font-size: 10.5pt;">
+        <li><strong>Forma de Pago para Planes Tácticos (Nivel 1):</strong> 
+          Al tratarse de paquetes especiales y accesibles de habilitación inmediata (&lt; $600.000 COP), el valor seleccionado (<strong>$380.000 COP</strong> o <strong>$580.000 COP</strong>) se cancela <strong>100% de contado de forma anticipada</strong> para dar inicio inmediato a los respaldos y gestiones de desbloqueo.
+        </li>
+        <li><strong>Forma de Pago para Planes Estructurales (Nivel 2 y 3):</strong> 
+          Anticipo del <strong>50%</strong> para inicio de entorno Staging y respaldos forenses, y <strong>50%</strong> contra entrega certificada con pruebas de penetración superadas.
+        </li>
+        <li><strong>Garantía de Crédito de Inversión (Escalabilidad):</strong> 
+          Si contratas el Plan Táctico B ($580.000 COP) y en los siguientes 45 días decides ascender al Plan de Remediación Integral ($3.600.000 COP), <strong>el 100% de los $580.000 COP se acreditará como abono</strong> a dicho contrato.
+        </li>
+        <li><strong>Política Estricta de Inicio:</strong> 
+          Ninguna modificación en servidores o código se iniciará sin la confirmación de la transferencia pactada.
+        </li>
+      </ul>
+
+      <!-- SECCIÓN 5 -->
+      <h2 class="section-heading"><span class="num">5.</span> Canales Bancarios Oficiales</h2>
+      <hr class="section-divider">
+
+      <div class="bank-card">
+        <p style="margin-bottom: 8px; font-size: 10pt; color: #444;">
+          Las transferencias y abonos deberán realizarse a nombre del consultor titular:
+        </p>
+        <div class="bank-grid">
+          <div>
+            <div class="bank-item-label">Titular de la Cuenta</div>
+            <div class="bank-item-value">Leonel Antonio Salcedo Acosta</div>
+          </div>
+          <div>
+            <div class="bank-item-label">Documento de Identidad</div>
+            <div class="bank-item-value">C.C. 1.022.943.003 de Bogotá</div>
+          </div>
+          <div>
+            <div class="bank-item-label">Entidad Bancaria</div>
+            <div class="bank-item-value">Banco Davivienda</div>
+          </div>
+          <div>
+            <div class="bank-item-label">Tipo y Número de Cuenta</div>
+            <div class="bank-item-value">Ahorros Nº 4884-2735-4540</div>
+          </div>
+          <div>
+            <div class="bank-item-label">Banca Digital / Transfiya / Nequi</div>
+            <div class="bank-item-value">322 373 6685</div>
+          </div>
+          <div>
+            <div class="bank-item-label">Notificación de Pagos</div>
+            <div class="bank-item-value" style="font-size: 10pt;">nomackleo@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 6 -->
+      <h2 class="section-heading"><span class="num">6.</span> Aceptación y Formalización</h2>
+      <hr class="section-divider">
+
+      <p>
+        La confirmación del abono correspondiente al plan elegido activará de inmediato la orden de trabajo para iniciar las labores técnicas.
+      </p>
+
+      <div class="signatures-container">
+        <div>
+          <div class="sig-line"></div>
+          <div class="sig-name">Leonel Salcedo</div>
+          <div class="sig-title">
+            Dirección y Consultoría Tecnológica<br>
+            C.C. 1.022.943.003 de Bogotá<br>
+            Consultor Líder en Infraestructura &amp; DevSecOps
+          </div>
+        </div>
+
+        <div>
+          <div class="sig-line"></div>
+          <div class="sig-name">Javier Fernández Franco</div>
+          <div class="sig-title">
+            CEO &amp; Representante Legal<br>
+            La Lupa News<br>
+            Aceptado — Orden de Servicio
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Interior -->
+      <div class="inner-footer">
+        <div>Leonel Salcedo — Dirección y Consultoría Tecnológica | Confidencial — La Lupa News</div>
+        <div>PROP-2026-LLN-SEC02</div>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
