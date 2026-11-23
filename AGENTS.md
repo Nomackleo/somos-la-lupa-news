@@ -1,4 +1,4 @@
-# La Lupa News (`somos-la-lupa-news`) — Gobernanza Local de Proyecto Desacoplado (Nomack Studio `v4.0.0`)
+# La Lupa News (`somos-la-lupa-news`) — Gobernanza Local de Proyecto Desacoplado (Nomack Studio `v5.0.0 / CRSI-Ready`)
 
 > **Proyecto:** `projects/la-lupa-news/` (Cuenta Exclusiva de Marca Personal — **Leonel Salcedo**)  
 > **Cliente Corporativo:** **La Lupa News** · **CEO:** **Javier Fernández Franco**  

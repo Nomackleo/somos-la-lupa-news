@@ -3,7 +3,7 @@
   "project_id": "la-lupa-news",
   "source_agent": "ISO_PROJECT_GOVERNANCE_ARCHITECT",
   "target_agent": "ALL",
-  "timestamp_utc": "2026-11-23T15:00:00Z",
+  "timestamp_utc": "2026-11-23T16:25:00Z",
   "gate_id": "GATE_0_PASSED",
   "status": "ACTIVE_BASELINE",
   "hitl_confirmed": true,
@@ -21,10 +21,19 @@
     "docs/01_gobernanza/NS-LLN-GOV-001_PLAN_MAESTRO_Y_GOBERNANZA_ISO.md",
     "docs/01_gobernanza/NS-LLN-GOV-002_MANUAL_ESTETICA_Y_UI_DOCUMENTAL.md",
     "docs/01_gobernanza/NS-LLN-GOV-003_PROTOCOLO_SEGURIDAD_Y_SINCRONIZACION.md",
+    "docs/01_gobernanza/negocio/NS-LLN-GOV-004_ESTUDIO_MERCADO_Y_NARRATIVA_PITCH.md",
     "docs/02_especificaciones/NS-LLN-SPEC-001_ARQUITECTURA_PORTAL_Y_ESQUEMA.md",
+    "docs/02_especificaciones/NS-LLN-SPEC-002_PLAN_MAESTRO_PITCH_INTERACTIVO_HITL.md",
     "docs/03_auditorias_y_drift/NS-LLN-AUD-001_AUDITORIA_SEGURIDAD_Y_VULNERABILIDADES.md",
+    "docs/03_auditorias_y_drift/NS-LLN-AUD-002_AUDITORIA_SCRAPING_MARCA_Y_CAPTURAS.md",
+    "docs/03_auditorias_y_drift/NS-LLN-AUD-003_AUDITORIA_OSINT_Y_ECOSISTEMA_SOCIAL.md",
     "docs/04_bitacora_cambios/NS-LLN-CHG-001_BITACORA_MIGRACION_Y_ESTANDARIZACION_ISO.md",
+    "docs/04_bitacora_cambios/NS-LLN-CHG-002_INTEGRACION_PITCH_OSINT_Y_ALINEACION_V5.md",
     "docs/04_bitacora_cambios/NS-LLN-MEM-001_MEMORIA_PERSISTENTE_LA_LUPA_NEWS.md",
+    "deliverables/pitch_comercial/Presentacion_Pitch_Comercial_Somos_La_Lupa_News.html",
+    "deliverables/pitch_comercial/Presentacion_Pitch_Comercial_Somos_La_Lupa_News.pdf",
+    "finance/cuentas_de_cobro/CUENTA_DE_COBRO_CC-2026-LLN-002_PITCH_LALUPANEWS.md",
+    "assets/branding/brand_tokens.json",
     "knowledge/project_memory.json",
     "knowledge/project_memory.sqlite",
     "knowledge/backups_cold_storage_manifest.json",
@@ -58,10 +67,14 @@
     },
     "commercial_and_finance_summary": {
       "net_receivable_cop": 2850000,
+      "pitch_billing_cc_002_cop": 50000,
+      "pitch_deliverables": "deliverables/pitch_comercial/Presentacion_Pitch_Comercial_Somos_La_Lupa_News.{html,pdf}",
       "active_quotation": "PROP-2026-LLN-SEC03 ($380k / $580k / $3.6M / $5.4M / $9.8M COP)"
     },
     "multi_host_sync": {
       "remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
+      "nomack_studio_version": "5.0.0",
+      "last_sync_host": "HOST-02-MOBILE",
       "hosts": ["HOST-01-STUDIO (Desktop)", "HOST-02-MOBILE (Laptop Nitro)"],
       "helper": "scripts/sync_workstation.ps1"
     }

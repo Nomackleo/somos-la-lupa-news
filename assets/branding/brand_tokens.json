@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "La Lupa News",
+    "portal_brand": "Somos La Lupa News",
+    "domain": "https://somoslalupanews.com",
+    "ceo": "Javier Fernández Franco",
+    "tagline": "Somos un portal informativo digital, donde el buen periodismo es el insumo principal para contar cada historia, noticia, crónica, reportaje, podcast o entrevista sobre el acontecer diario en Colombia y en el mundo.",
+    "address": "Calle 127 #16A-76, oficina 402, Bogotá, Colombia",
+    "contact_email": "lalupanewsco@gmail.com",
+    "cms_stack": {
+      "cms": "WordPress 6.9.9",
+      "theme": "JNews",
+      "page_builder": "Elementor 3.35.8 + Elementor Pro",
+      "seo": "Yoast SEO + AMP",
+      "cache_hosting": "LiteSpeed Cache / Hostinger",
+      "marketing_tools": ["HubSpot (leadin)", "Mailchimp for WP (mc4wp)", "Forminator Polls", "Complianz Privacy"],
+      "trm_engine": "Plugin custom Financial Market Plugin (fmp/v1 — .fmp-trm-summary-card)"
+    }
+  },
+  "colors": {
+    "primary": {
+      "hex": "#052962",
+      "rgb": "rgb(5, 41, 98)",
+      "css_var": "--e-global-color-primary",
+      "role": "Azul Marino Institucional — Header, navegación principal, footer, logotipo oficial"
+    },
+    "primary_dark": {
+      "hex": "#041F4A",
+      "rgb": "rgb(4, 31, 74)",
+      "role": "Azul Marino Profundo — Barra superior de redes sociales y botón En Vivo"
+    },
+    "ink_text": {
+      "hex": "#02132F",
+      "rgb": "rgb(2, 19, 47)",
+      "css_var": "--e-global-color-text / --j-alt-color / --j-entry-color",
+      "role": "Azul Noche — Texto principal y cuerpo editorial"
+    },
+    "editorial_blue": {
+      "hex": "#346E9B",
+      "rgb": "rgb(52, 110, 155)",
+      "css_var": "--j-body-color / --j-entry-link-color",
+      "role": "Azul Editorial — Titulares en portada, enlaces y cifras del widget TRM"
+    },
+    "accent": {
+      "hex": "#AA5959",
+      "rgb": "rgb(170, 89, 89)",
+      "css_var": "--e-global-color-accent / --j-accent-color",
+      "role": "Rojo Terracota / Borgoña Editorial — H1 de artículos, etiquetas TRM (TRM HOY), acentos y subrayados de sección"
+    },
+    "secondary": {
+      "hex": "#B9AF07",
+      "rgb": "rgb(185, 175, 7)",
+      "css_var": "--e-global-color-secondary",
+      "role": "Dorado Oliva — Acento secundario, botones de acción y menú móvil"
+    },
+    "heading_slate": {
+      "hex": "#2E3C46",
+      "rgb": "rgb(46, 60, 70)",
+      "css_var": "--j-heading-color",
+      "role": "Gris Pizarra Azulado — Subtítulos y encabezados secundarios"
+    },
+    "background_white": {
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "role": "Fondo principal limpio de lectura editorial"
+    },
+    "surface_light": {
+      "hex": "#F7F7F7",
+      "rgb": "rgb(247, 247, 247)",
+      "role": "Superficie secundaria de tarjetas, módulos y bloques de noticias"
+    },
+    "border_subtle": {
+      "hex": "#DEE2E6",
+      "rgb": "rgb(222, 226, 230)",
+      "role": "Bordes estructurales de tarjetas y contenedor TRM"
+    },
+    "text_secondary": {
+      "hex": "#2B2F33",
+      "rgb": "rgb(43, 47, 51)",
+      "role": "Fechas del widget TRM y textos de soporte"
+    },
+    "text_muted": {
+      "hex": "#69727D",
+      "rgb": "rgb(105, 114, 125)",
+      "role": "Metadatos, breadcrumbs, créditos de foto y etiquetas suaves"
+    }
+  },
+  "typography": {
+    "primary_display": {
+      "family": "MFB Oldstyle",
+      "variants": ["MFB Oldstyle Bold (700/800)"],
+      "css_var": "--e-global-typography-primary-font-family",
+      "usage": "Titulares principales (H1/H2/H3), cifras destacadas TRM, barra de navegación",
+      "google_font_equivalent": "Playfair Display / Libre Baskerville"
+    },
+    "secondary_serif": {
+      "family": "LT Superior Serif",
+      "variants": ["Regular (400)", "Bold (700/800)"],
+      "css_var": "--e-global-typography-secondary-font-family",
+      "usage": "Entradillas editoriales, subtítulos y destacados periodísticos",
+      "google_font_equivalent": "Source Serif 4 / Merriweather"
+    },
+    "body_ui_sans": {
+      "family": "Funnel Sans",
+      "variants": ["Regular (400)", "Bold (800)"],
+      "css_var": "--e-global-typography-text-font-family / --e-global-typography-accent-font-family",
+      "usage": "Cuerpo de artículos, navegación auxiliar, etiquetas, botones y UI",
+      "google_font_equivalent": "Funnel Sans (disponible nativamente en Google Fonts)"
+    },
+    "display_alt": {
+      "family": "LT Museum",
+      "variants": ["Bold (600)", "MediumItalic"],
+      "usage": "Elementos gráficos y títulos de secciones especiales"
+    },
+    "technical_note": "Los archivos @font-face existen (HTTP 200) en somoslalupanews.com/wp-content/uploads/2025/01/, pero las hojas de estilo aún apuntan al dominio antiguo lalupanews.com (HTTP/2 error). Para el pitch HTML interactivo se recomienda cargar Google Fonts (Playfair Display + Funnel Sans) manteniendo fidelidad visual exacta."
+  },
+  "assets": {
+    "logo_dark_bg": {
+      "path": "assets/branding/logos/Logo 2.png",
+      "dimensions": "2000x1549",
+      "usage": "Logotipo oficial blanco sobre fondo Azul Marino (#052962) — Header, Portada y Footer oscuros"
+    },
+    "logo_light_bg": {
+      "path": "assets/branding/logos/Logo 1.png",
+      "dimensions": "2000x1549",
+      "usage": "Logotipo oficial en Azul Marino (#052962) sobre fondo transparente — Fondos claros y documentos"
+    },
+    "imago_white": {
+      "path": "assets/branding/logos/Imago favi2.png",
+      "dimensions": "2000x2000",
+      "usage": "Isotipo (lupa con ojo) en blanco sobre fondo transparente — Badges y fondos oscuros"
+    },
+    "imago_navy": {
+      "path": "assets/branding/logos/Imago 1.png",
+      "dimensions": "2000x2000",
+      "usage": "Isotipo (lupa con ojo) en Azul Marino (#052962) sobre transparente — Marcas de agua y fondos claros"
+    },
+    "favicon": {
+      "path": "assets/branding/logos/favicon.png",
+      "dimensions": "300x300",
+      "usage": "Favicon oficial activo del portal"
+    }
+  },
+  "social_links": {
+    "youtube_portal": "https://www.youtube.com/@LaLupaNews",
+    "youtube_ceo_cantante": "https://www.youtube.com/@elcantantedelgol.oficial",
+    "instagram": "https://www.instagram.com/lalupanewsco/",
+    "x_twitter": "https://x.com/lalupanewsco",
+    "tiktok": "https://www.tiktok.com/@lalupanews",
+    "facebook": "https://www.facebook.com/profile.php?id=61572383767685",
+    "linkedin": "https://www.linkedin.com/in/la-lupa-news-504432338/"
+  },
+  "trm_widget_snapshot": {
+    "verified_date": "2026-11-19",
+    "status": "ACTIVO Y ACTUALIZADO DIARIAMENTE",
+    "selector": ".fmp-trm-summary-card",
+    "position_desktop": "y=247px (above the fold, ancho 1140px x alto 90px, justo debajo de la navegación principal)",
+    "values_observed": {
+      "trm_hoy": "$3,327 COP (19 noviembre, 2026)",
+      "trm_ayer": "$3,310 (18 noviembre, 2026)",
+      "trm_anteayer": "$3,317 (14 noviembre, 2026)"
+    }
+  },
+  "editorial_archive_snapshot": {
+    "total_published_posts": 4583,
+    "first_post_date": "2024-10-22",
+    "latest_post_date": "2026-03-20",
+    "inactivity_gap_as_of_2026_11_19": "~8 meses (desde el 20 de marzo de 2026)",
+    "main_navigation_sections": ["Colombia", "Política", "Deportes", "Mundo", "Historias", "Música", "Opinión", "En Vivo"],
+    "top_categories_by_volume": {
+      "Colombia": 2312,
+      "Mundo": 668,
+      "Deportes": 657,
+      "Poder": 591,
+      "Historias": 126,
+      "Portada": 110,
+      "Opinión": 71,
+      "Economía": 34,
+      "Negocios": 27,
+      "Entretenimiento": 23,
+      "Música": 20,
+      "Estilo de Vida": 19,
+      "Arte & Cultura": 17
+    }
+  },
+  "pitch_design_directive": {
+    "important_rule": "El Pitch Comercial HTML interactivo DEBE emplear exclusivamente esta identidad real de Somos La Lupa News (#052962, #346E9B, #AA5959, #B9AF07, #FFFFFF, #F7F7F7 + logos oficiales en assets/branding/logos/), NUNCA la paleta morado/dorado de los informes internos de consultoría."
+  }
+}

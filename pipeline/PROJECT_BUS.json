@@ -6,11 +6,11 @@
   "client_ceo": "Javier Fernández Franco",
   "owner_hitl": "Leonel Salcedo",
   "account_category": "PERSONAL_BRAND_EXCLUSIVE",
-  "nomack_studio_version": "4.0.0",
+  "nomack_studio_version": "5.0.0",
   "decoupled_root": "projects/la-lupa-news",
   "github_remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
-  "last_updated_utc": "2026-11-23T15:00:00Z",
-  "last_sync_host": "HOST-01-STUDIO",
+  "last_updated_utc": "2026-11-23T16:25:00Z",
+  "last_sync_host": "HOST-02-MOBILE",
   "sync_peer_hosts": [
     "HOST-01-STUDIO",
     "HOST-02-MOBILE"

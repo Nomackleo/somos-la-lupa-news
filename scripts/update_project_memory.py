@@ -94,6 +94,10 @@ def _classify_category(rel_posix: str) -> str:
         return "blackboard_pipeline"
     if rel_posix.startswith("finance/"):
         return "finance_commercial"
+    if rel_posix.startswith("deliverables/"):
+        return "deliverables"
+    if rel_posix.startswith("assets/"):
+        return "brand_assets"
     if rel_posix.startswith("scripts/"):
         return "automation_scripts"
     if rel_posix.startswith(".agents/"):

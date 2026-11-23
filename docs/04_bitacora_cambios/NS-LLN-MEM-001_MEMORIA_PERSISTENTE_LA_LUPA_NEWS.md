@@ -3,7 +3,7 @@
 | Campo de Control ISO 9001 (Cláusula 7.5) | Valor Canónico |
 | :--- | :--- |
 | **Código de Documento** | `NS-LLN-MEM-001` |
-| **Versión SemVer** | `1.0.0` |
+| **Versión SemVer** | `1.1.0` |
 | **Fecha de Emisión / Revisión** | `2026-11-23` |
 | **Estado** | `Vigente` |
 | **Autor / Aprobador** | `Leonel Salcedo (Dirección y Consultoría Tecnológica / HITL Lead)` |
@@ -39,19 +39,27 @@ Este registro consolida de forma verificable el contexto institucional, el estad
 | **Postura CVE** | **93 vulnerabilidades documentadas (Nivel CRÍTICO):** 28 en WP Core `6.9.9` (SQLi, LFI→RCE, XSS→RCE, REST Batch), 64 en 8 plugins activos (Forminator `1.51.1` [38], Complianz `7.1.6` [13], Elementor `3.35.8` [6], CMB2 [3], MC4WP [2], Elementor Pro [1], GTM4WP [1]), 1 en tema JNews. | `NS-LLN-AUD-001` |
 | **Exposición Perimetral** | Bloqueo **FortiGuard NRD**; REST `/wp-json/wp/v2/users` abierto (91.3 KB); `X-Powered-By` / `Server` expuestos; `allow_url_fopen=On`; sin HSTS/XFO/CSP; registro `ftp` expone IP origen; DMARC `p=none`, SPF `~all`. | `NS-LLN-AUD-001` |
 | **Regla Operativa Activa** | **Solo diagnóstico no invasivo hasta Gate 1 (aprobación comercial HITL).** Ninguna modificación en producción autorizada aún. | `NS-LLN-GOV-001` |
+| **Archivo Editorial & Widget TRM** | **4.583 artículos** publicados (`2024-10-22` → `2026-03-20`; latencia ~8 meses); Widget TRM vivo *above-the-fold* (`.fmp-trm-summary-card`, `\$3,327 COP` al `2026-11-19`); prueba social real (**Café Águila Roja** en Deportes y **Súper Astro** en portada). | `NS-LLN-AUD-002` & `assets/branding/brand_tokens.json` |
+| **Identidad Portal vs. Consultoría** | El **portal y el Pitch HTML/PDF al mercado** usan exclusivamente la paleta real de `somoslalupanews.com` (`#052962`, `#346E9B`, `#AA5959`, `#B9AF07`, `#FFFFFF`/`#F7F7F7`). Los **documentos de consultoría** dirigidos a Javier Fernández Franco usan Morado `#2d124d` + Dorado `#b8842a`. | `NS-LLN-AUD-002`, `NS-LLN-SPEC-002` & `GEMINI.md` |
+| **OSINT, SEO & Redes Sociales** | 11 referencias residuales en portada hacia `lalupanews.com` (incl. `og:image` y fuentes `@font-face`), `mailto:contact@mysite.com` roto, faltan `/ads.txt` y `/news-sitemap.xml`, 6 JSON-LD duplicados, LinkedIn en perfil personal `/in/` (migrar a Company Page). Canales: `@lalupanewsco` (IG/X), `@LaLupaNews` (YT: 49 subs), `@lalupanews` (TikTok) + canal aliado CEO `@elcantantedelgol.oficial` (9.22K YT). Filtro estricto de 10 homónimos (*La Lupa Pereira/Perú/Ecuador*, etc.). | `NS-LLN-AUD-003` |
 
 ---
 
-## 4. Conciliación Financiera y Portafolio Comercial Vigente
+## 4. Conciliación Financiera, Pitch Comercial y Portafolio Vigente
 
-### 4.1. Balance Contable Histórico (Corte `2026-10-21`)
+### 4.1. Balance Contable Histórico (Corte `2026-10-21` — `CC-2026-LLN-001`)
 - **Honorarios Ciclo 1 (2024–2025):** Causado `\$2.500.000` | Abonado `\$0` | Pendiente `\$2.500.000` (Vencido).
 - **Honorarios Ciclo 2 (2025):** Causado `\$2.500.000` | Abonado `\$2.000.000` (`2026-10-09`) | Pendiente `\$500.000`.
 - **Fondo Dominio GoDaddy (`2026-10-21`):** Giro recibido `\$200.000` | Registro `\$50.000` | Saldo a favor cliente `-\$150.000`.
-- **Balance Neto Consolidado Exigible:** **`\$2.850.000 COP`** (`\$3.000.000` honorarios netos menos `\$150.000` remanente dominio).
+- **Balance Neto Consolidado Exigible (`CC-2026-LLN-001`):** **`\$2.850.000 COP`** (`\$3.000.000` honorarios netos menos `\$150.000` remanente dominio).
 - **Fuente:** [`finance/cuentas_de_cobro/INFORME_AUDITORIA_FINANCIERA_LALUPANEWS.md`](../../finance/cuentas_de_cobro/INFORME_AUDITORIA_FINANCIERA_LALUPANEWS.md).
 
-### 4.2. Cotización de Remediación Activa (`PROP-2026-LLN-SEC03`)
+### 4.2. Entregable Pitch Comercial y Cuenta de Cobro `CC-2026-LLN-002` (`2026-11-19`)
+- **Entregables Compilados:** Presentación interactiva HTML autocontenida (`1.66 MB`, Base64 WebP/PNG, 0 dependencias) + versión PDF vectorial widescreen (`5.76 MB`, `1440×900`) en [`deliverables/pitch_comercial/`](../../deliverables/pitch_comercial/), construibles vía `scripts/build_pitch_html_la_lupa.py` y `scripts/build_pitch_pdf_la_lupa.py`.
+- **Cuenta de Cobro `CC-2026-LLN-002`:** **`\$50.000 COP`** (tarifa especial preferencial única; demostración previa y liberación del archivo HTML final contra confirmación de pago a Banco Davivienda `488427354540` o llave Bre-B `1022943003`).
+- **Fuente:** [`finance/cuentas_de_cobro/CUENTA_DE_COBRO_CC-2026-LLN-002_PITCH_LALUPANEWS.md`](../../finance/cuentas_de_cobro/CUENTA_DE_COBRO_CC-2026-LLN-002_PITCH_LALUPANEWS.md) y `.docx`.
+
+### 4.3. Cotización de Remediación Activa (`PROP-2026-LLN-SEC03`)
 - **Nivel 1A (Desbloqueo & DNS):** `\$380.000 COP` (2–3 días hábiles).
 - **Nivel 1B (Investor-Ready & BMV — Recomendado Rondas):** `\$580.000 COP` (3–4 días hábiles; 100% acreditable si sube a Nivel 2 en 45 días).
 - **Nivel 2 (Remediación Integral 93 CVEs + Staging):** `\$3.600.000 COP` (7–10 días hábiles).
@@ -70,7 +78,9 @@ Este registro consolida de forma verificable el contexto institucional, el estad
 | **ADR-LLN-003** | `2026-10-28` | Auditoría forense no invasiva + cotización escalonada en 4 niveles (`PROP-2026-LLN-SEC03`) | Trazabilidad objetiva de 93 CVEs antes de intervenir producción y viabilidad comercial *Investor-Ready*. |
 | **ADR-LLN-004** | `2026-11-23` | Migración desacoplada a `projects/la-lupa-news/` bajo taxonomía ISO 9001 Cl. 7.5 (`docs/01..04`) | Cumplimiento de `rules/architecture-directory-governance-standards.md`, eliminación de duplicados y purga de guía heredada conflictiva (`NOMACK_STUDIO_STYLE_GUIDE.md`). |
 | **ADR-LLN-005** | `2026-11-23` | Bóveda `.secrets/` local + manifiesto de respaldos en frío (`6.98 GB` en `D:\Work\lalupanews\05_Servidor_Backups\`) | Cumplimiento **ISO/IEC 27001:2022 A.8.12**: cero contraseñas, dumps `.sql` o archivos `.tar` en GitHub ni en SQLite. |
-| **ADR-LLN-006** | `2026-11-23` | Memoria persistente dual: local autocontenida (`knowledge/project_memory.json` + `project_memory.sqlite` FTS5) + global (`codebase_memory.sqlite`) | Continuidad inmediata entre **Desktop (`HOST-01-STUDIO`)** y **Laptop Nitro (`HOST-02-MOBILE`)** con `$0.00` de costo de indexación. |
+| **ADR-LLN-006** | `2026-11-23` | Memoria persistente dual: local autocontenida (`knowledge/project_memory.json` + `project_memory.sqlite` FTS5) + global (`codebase_memory.sqlite`) | Continuidad inmediata entre **Desktop (`HOST-01-STUDIO`)** y **Laptop Nitro (`HOST-02-MOBILE`)** con `\$0.00` de costo de indexación. |
+| **ADR-LLN-007** | `2026-11-23` | Separación estricta de identidad visual entre entregables de consultoría (`#2d124d`+`#b8842a`) y Pitch HTML/PDF al mercado (`#052962`+`#346E9B`+`#AA5959`+`#B9AF07`) | Preserva la autenticidad editorial de `somoslalupanews.com` ante anunciantes e inversionistas sin violar `GEMINI.md` en informes de consultoría. |
+| **ADR-LLN-008** | `2026-11-23` | Integración ISO de Pitch Comercial (`deliverables/pitch_comercial/`), auditorías `NS-LLN-AUD-002/003`, `CC-2026-LLN-002` y alineación a **Nomack Studio `v5.0.0`** desde `HOST-02-MOBILE` | Elimina carpetas fuera de taxonomía (`bin/`, `docs/02..05`), deduplica 4 PNGs exactos y sincroniza ambas estaciones sin pérdida de datos (`NS-LLN-CHG-002`). |
 
 ---
 
@@ -79,7 +89,8 @@ Este registro consolida de forma verificable el contexto institucional, el estad
 1. **Nunca exponer `.secrets/` ni backups crudos:** Verificar siempre que `.secrets/`, `*.sql`, `*.tar*`, `*.zip`, `*.rar` estén ignorados por Git antes de cualquier commit.
 2. **Rutas portables multi-estación:** Todo script en `scripts/` debe usar `Path(__file__).resolve()` (prohibido hardcodear `D:\Work\lalupanews\`).
 3. **Actualización obligatoria de memoria:** Al cerrar cada hito, ejecutar `python scripts\update_project_memory.py` y actualizar `pipeline/PROJECT_BUS.json` + este archivo `NS-LLN-MEM-001`.
-4. **Próximos hitos pendientes (post Gate 1):**
-   - Recibir confirmación de Javier Fernández Franco sobre plan `PROP-2026-LLN-SEC03` y conciliación de cartera.
-   - Ejecutar Fase 1 (desbloqueo FortiGuard + saneamiento DNS GoDaddy/Hostinger + 10 URLs residuales).
-   - Clonar `Nomackleo/somos-la-lupa-news` en **Laptop Nitro (`HOST-02-MOBILE`)** bajo `projects/la-lupa-news/`.
+4. **Próximos hitos pendientes:**
+   - Socializar en demostración previa el Pitch Comercial (`deliverables/pitch_comercial/`) y gestionar liberación tras pago de `CC-2026-LLN-002` (`\$50.000 COP`).
+   - Recibir confirmación de Javier Fernández Franco sobre plan `PROP-2026-LLN-SEC03` y conciliación de cartera `CC-2026-LLN-001` (`\$2.850.000 COP`).
+   - Ejecutar Fase 1 (desbloqueo FortiGuard + saneamiento DNS GoDaddy/Hostinger + 11 referencias residuales de `lalupanews.com` + `mailto:contact@mysite.com`) **solo tras Gate 1 y backup verificado**.
+   - Sincronizar estación **Desktop (`HOST-01-STUDIO`)** con `.\scripts\sync_workstation.ps1 -Action pull` para incorporar los activos del Pitch y auditorías integrados desde `HOST-02-MOBILE`.

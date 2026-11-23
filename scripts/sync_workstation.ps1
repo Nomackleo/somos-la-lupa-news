@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Multi-Host Git Synchronization Helper for La Lupa News (Nomack Studio v4.0.0)
+    Multi-Host Git Synchronization Helper for La Lupa News (Nomack Studio v5.0.0)
 .DESCRIPTION
     Enforces Pre-Flight Fetch, Zero Data Loss, ISO 27001 secret guard (.secrets/ never staged),
     and synchronized push/pull between Desktop (HOST-01-STUDIO) and Laptop Nitro (HOST-02-MOBILE).

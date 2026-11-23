@@ -36,27 +36,33 @@ projects/la-lupa-news/
 ├── .agents/                        # Reglas y skills locales específicas de La Lupa News
 ├── .secrets/                       # [GITIGNORED] Bóveda local de credenciales (ISO 27001 A.8.12)
 ├── assets/
-│   ├── branding/                   # Logos, manual de marca y tipografías oficiales
+│   ├── branding/                   # Logos SSOT, manual de marca, brand_tokens.json y tipografías
+│   ├── captures/                   # 5 capturas Retina verificadas de somoslalupanews.com y Widget TRM
 │   └── web-media/                  # Recursos editoriales y piezas de prueba del portal
+├── deliverables/
+│   └── pitch_comercial/            # Pitch Comercial/Inversión autocontenido (HTML interactivo + PDF 1440×900)
 ├── docs/                           # Taxonomía obligatoria ISO 9001 Cláusula 7.5
 │   ├── README.md                   # NS-LLN-DOC-000 — Índice Maestro Documental ISO
-│   ├── 01_gobernanza/              # NS-LLN-GOV-001..003 + documentación comercial/negocio
-│   ├── 02_especificaciones/        # NS-LLN-SPEC-001 + diagramas Mermaid y comparativas técnicas
-│   ├── 03_auditorias_y_drift/      # NS-LLN-AUD-001 (Auditoría 93 CVEs / FortiGuard / Hostinger)
-│   └── 04_bitacora_cambios/        # NS-LLN-CHG-001 + NS-LLN-MEM-001 (Memoria Persistente)
-├── finance/                        # Comprobantes PSE, cotizaciones y conciliación de cartera
+│   ├── 01_gobernanza/              # NS-LLN-GOV-001..004 + documentación comercial/negocio
+│   ├── 02_especificaciones/        # NS-LLN-SPEC-001..002 + diagramas Mermaid y blueprint del Pitch
+│   ├── 03_auditorias_y_drift/      # NS-LLN-AUD-001..003 (Seguridad 93 CVEs, Marca/Scraping y OSINT/Redes)
+│   └── 04_bitacora_cambios/        # NS-LLN-CHG-001..002 + NS-LLN-MEM-001 (Memoria Persistente)
+├── finance/                        # Comprobantes PSE, cotizaciones y cuentas de cobro (CC-2026-LLN-001/002)
 ├── knowledge/                      # Memoria persistente optimizada para modelos IA
 │   ├── README.md                   # Protocolo Brief-First de carga de contexto
 │   ├── project_memory.json         # Grafo estructurado de conocimiento del proyecto
 │   ├── project_memory.sqlite       # Índice local FTS5 BM25 con validación anti-secretos
 │   └── backups_cold_storage_manifest.json # Inventario auditado de respaldos fuera de Git
 ├── pipeline/                       # Patrón Blackboard para continuidad agéntica
-│   ├── PROJECT_BUS.json            # Estado vivo de fases, compuertas HITL y sincronización
+│   ├── PROJECT_BUS.json            # Estado vivo de fases, compuertas HITL y sincronización (v5.0.0)
 │   └── handoffs/                   # Contratos JSON validados por handoff-validator.py
 ├── scripts/
-│   ├── generate_quotation_docx.py  # Generador DOCX con rutas portables multi-estación
-│   ├── update_project_memory.py    # Indexador local determinista SQLite FTS5 ($0.00)
-│   └── sync_workstation.ps1        # Asistente de sincronización Desktop <-> Laptop Nitro
+│   ├── build_docx_cuenta_de_cobro_la_lupa.py # Generador DOCX Cuenta de Cobro CC-2026-LLN-002
+│   ├── build_pitch_html_la_lupa.py           # Compilador del Pitch HTML autocontenido (Base64 WebP/PNG)
+│   ├── build_pitch_pdf_la_lupa.py            # Exportador vectorial PDF 1440×900 del Pitch
+│   ├── generate_quotation_docx.py            # Generador DOCX de cotizaciones con rutas portables
+│   ├── update_project_memory.py              # Indexador local determinista SQLite FTS5 ($0.00)
+│   └── sync_workstation.ps1                  # Asistente de sincronización Desktop <-> Laptop Nitro
 ├── templates/                      # Plantilla oficial ejecutiva con portada de 9 niveles
 ├── web/                            # Referencias y metadatos de plugins/temas WordPress
 ├── .gitignore                      # Blindaje ISO 27001 (excluye .secrets, dumps SQL y backups)

@@ -1,11 +1,12 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project_slug": "la-lupa-news",
   "repository_name": "somos-la-lupa-news",
   "github_remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
   "canonical_path": "projects/la-lupa-news",
-  "last_updated_utc": "2026-11-23T15:00:00Z",
-  "updated_by_host": "HOST-01-STUDIO",
+  "nomack_studio_version": "5.0.0",
+  "last_updated_utc": "2026-11-23T16:25:00Z",
+  "updated_by_host": "HOST-02-MOBILE",
   "iso_standards": [
     "ISO 9001:2015 (Cl. 7.1.6 & 7.5)",
     "ISO/IEC 27001:2022 (A.5.8, A.8.12, A.8.19, A.8.20)",
@@ -112,12 +113,53 @@
       "level_2_full_remediation_93_cves": 3600000,
       "level_3_devsecops_90d": 5400000,
       "level_4_custom_backend_no_wp": 9800000
+    },
+    "pitch_billing_cc_002": {
+      "document_code": "CC-2026-LLN-002",
+      "amount_cop": 50000,
+      "modality": "Preferential one-time fee; preview demo prior to release of final standalone HTML",
+      "path": "finance/cuentas_de_cobro/CUENTA_DE_COBRO_CC-2026-LLN-002_PITCH_LALUPANEWS.md"
+    }
+  },
+  "editorial_and_pitch_baseline": {
+    "audit_date": "2026-11-19",
+    "published_articles_total": 4583,
+    "archive_span": "2024-10-22 to 2026-03-20 (~8 months operational dormancy)",
+    "trm_widget_live": {
+      "selector": ".fmp-trm-summary-card",
+      "verified_value_cop": 3327,
+      "verified_date": "2026-11-19"
+    },
+    "portal_real_brand_palette_for_pitch": {
+      "navy_primary": "#052962",
+      "navy_topbar": "#041F4A",
+      "editorial_blue": "#346E9B",
+      "terracotta_accent": "#AA5959",
+      "olive_gold_cta": "#B9AF07",
+      "tokens_path": "assets/branding/brand_tokens.json"
+    },
+    "social_proof_observed": [
+      "Café Águila Roja (section sponsorship in Deportes)",
+      "Súper Astro WEB (6 active display positions on homepage)"
+    ],
+    "pitch_deliverables": {
+      "spec_doc": "docs/02_especificaciones/NS-LLN-SPEC-002_PLAN_MAESTRO_PITCH_INTERACTIVO_HITL.md",
+      "market_study": "docs/01_gobernanza/negocio/NS-LLN-GOV-004_ESTUDIO_MERCADO_Y_NARRATIVA_PITCH.md",
+      "scraping_brand_audit": "docs/03_auditorias_y_drift/NS-LLN-AUD-002_AUDITORIA_SCRAPING_MARCA_Y_CAPTURAS.md",
+      "osint_social_audit": "docs/03_auditorias_y_drift/NS-LLN-AUD-003_AUDITORIA_OSINT_Y_ECOSISTEMA_SOCIAL.md",
+      "standalone_html": "deliverables/pitch_comercial/Presentacion_Pitch_Comercial_Somos_La_Lupa_News.html",
+      "vector_pdf": "deliverables/pitch_comercial/Presentacion_Pitch_Comercial_Somos_La_Lupa_News.pdf",
+      "builders": [
+        "scripts/build_pitch_html_la_lupa.py",
+        "scripts/build_pitch_pdf_la_lupa.py",
+        "scripts/build_docx_cuenta_de_cobro_la_lupa.py"
+      ]
     }
   },
   "workstations_sync": {
     "hosts": [
       { "host_id": "HOST-01-STUDIO", "label": "Desktop Principal (NOMACK)", "role": "primary" },
-      { "host_id": "HOST-02-MOBILE", "label": "Laptop Nitro", "role": "mobile_sync" }
+      { "host_id": "HOST-02-MOBILE", "label": "Laptop Nitro (Nomack Studio v5.0.0 Reference)", "role": "mobile_sync_v5" }
     ],
     "sync_protocol_doc": "docs/01_gobernanza/NS-LLN-GOV-003_PROTOCOLO_SEGURIDAD_Y_SINCRONIZACION.md",
     "sync_script": "scripts/sync_workstation.ps1",
@@ -125,15 +167,18 @@
   },
   "adrs": [
     "ADR-LLN-001: Acquire somoslalupanews.com via GoDaddy",
-    "ADR-LLN-002: Enforce #2d124d + #b8842a client brand palette",
+    "ADR-LLN-002: Enforce #2d124d + #b8842a client brand palette for consulting deliverables",
     "ADR-LLN-003: Non-invasive 93-CVE audit & 4-tier commercial quote PROP-2026-LLN-SEC03",
     "ADR-LLN-004: Decouple into projects/la-lupa-news with ISO 9001 Cl. 7.5 4-folder docs taxonomy",
     "ADR-LLN-005: Isolate secrets in .secrets/ and 6.98 GB cold backups off-Git (ISO 27001 A.8.12)",
-    "ADR-LLN-006: Dual persistent memory (in-project JSON+FTS5 SQLite + global codebase_memory.sqlite)"
+    "ADR-LLN-006: Dual persistent memory (in-project JSON+FTS5 SQLite + global codebase_memory.sqlite)",
+    "ADR-LLN-007: Enforce real portal palette (#052962/#346E9B/#AA5959/#B9AF07) exclusively on market-facing Pitch HTML/PDF",
+    "ADR-LLN-008: Integrate Pitch/OSINT/CC-2026-LLN-002 deliverables into ISO taxonomy and align governance to Nomack Studio v5.0.0 from HOST-02-MOBILE"
   ],
   "next_actions": [
-    "Clone Nomackleo/somos-la-lupa-news into projects/la-lupa-news on Laptop Nitro (HOST-02-MOBILE)",
-    "Await HITL Gate 1 commercial approval from Javier Fernández Franco on PROP-2026-LLN-SEC03",
-    "Execute Phase 1 remediation only after Gate 1 approval and fresh verified backup"
+    "Demo standalone Pitch HTML/PDF to Javier Fernández Franco and release upon payment confirmation of CC-2026-LLN-002 ($50,000 COP)",
+    "Await HITL Gate 1 commercial approval from Javier Fernández Franco on PROP-2026-LLN-SEC03 and CC-2026-LLN-001 reconciliation",
+    "Execute Phase 1 remediation (FortiGuard unlock, DNS hardening, 11 legacy lalupanews.com refs, mailto fix) only after Gate 1 approval and verified backup",
+    "Run sync_workstation.ps1 -Action pull on Desktop HOST-01-STUDIO to ingest Pitch/OSINT ISO integration"
   ]
 }
