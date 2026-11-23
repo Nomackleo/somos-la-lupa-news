@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "project_id": "la-lupa-news",
+  "project_name": "La Lupa News (somos-la-lupa-news)",
+  "client": "La Lupa News",
+  "client_ceo": "Javier Fernández Franco",
+  "owner_hitl": "Leonel Salcedo",
+  "account_category": "PERSONAL_BRAND_EXCLUSIVE",
+  "nomack_studio_version": "4.0.0",
+  "decoupled_root": "projects/la-lupa-news",
+  "github_remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
+  "last_updated_utc": "2026-11-23T15:00:00Z",
+  "last_sync_host": "HOST-01-STUDIO",
+  "sync_peer_hosts": [
+    "HOST-01-STUDIO",
+    "HOST-02-MOBILE"
+  ],
+  "current_phase": "PHASE_1_ISO_MIGRATION_AND_AWAITING_CLIENT_GATE_1",
+  "active_gate": "GATE_1_CLIENT_APPROVAL",
+  "production_intervention_lock": "READ_ONLY_UNTIL_GATE_1",
+  "persistent_memory": {
+    "markdown_master": "docs/04_bitacora_cambios/NS-LLN-MEM-001_MEMORIA_PERSISTENTE_LA_LUPA_NEWS.md",
+    "structured_json": "knowledge/project_memory.json",
+    "local_sqlite_fts5": "knowledge/project_memory.sqlite",
+    "local_indexer_script": "scripts/update_project_memory.py",
+    "global_mcp_scope": "project:la-lupa-news"
+  },
+  "active_handoffs": [
+    "pipeline/handoffs/INIT_to_ALL_001_memory_brief.json"
+  ]
+}

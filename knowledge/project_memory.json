@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "project_slug": "la-lupa-news",
+  "repository_name": "somos-la-lupa-news",
+  "github_remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
+  "canonical_path": "projects/la-lupa-news",
+  "last_updated_utc": "2026-11-23T15:00:00Z",
+  "updated_by_host": "HOST-01-STUDIO",
+  "iso_standards": [
+    "ISO 9001:2015 (Cl. 7.1.6 & 7.5)",
+    "ISO/IEC 27001:2022 (A.5.8, A.8.12, A.8.19, A.8.20)",
+    "ISO/IEC 25010:2023",
+    "ISO/IEC 42001:2023",
+    "Ley 1581 de 2012 (Colombia)"
+  ],
+  "governance": {
+    "client": "La Lupa News",
+    "client_ceo": "Javier Fernández Franco",
+    "account_category": "B_PERSONAL_BRAND_EXCLUSIVE",
+    "official_author_client_facing": "Leonel Salcedo — Dirección y Consultoría Tecnológica",
+    "palette_client_facing": {
+      "primary_purple": "#2d124d",
+      "deep_purple": "#220d3a",
+      "institutional_gold": "#b8842a",
+      "body_text": "#222222",
+      "metadata_gray": "#777777",
+      "footer_divider": "#cccccc"
+    },
+    "strict_prohibitions_client_facing": [
+      "NEVER use #1a3a5c",
+      "NEVER mention Daniel Moncada or unrelated partnerships",
+      "NEVER use the alias 'Nomack' in deliverables addressed to Javier Fernández Franco",
+      "NEVER emit formal deliverables without the 9-level cover page"
+    ]
+  },
+  "infrastructure": {
+    "active_domain": {
+      "name": "somoslalupanews.com",
+      "registrar": "GoDaddy",
+      "registered_date": "2026-10-21",
+      "status": "BLOCKED_FORTIGUARD_NRD",
+      "annual_cost_usd": 11.99
+    },
+    "legacy_domain": {
+      "name": "lalupanews.com",
+      "status": "CAPTURED_BY_THIRD_PARTY_PARKED",
+      "dropcatch_date": "2026-09-13",
+      "auction_date": "2026-09-17",
+      "parking_provider": "ParkLogic / pltraffic7.com (ns4/ns5.dnsauthority.com)",
+      "residual_links_in_db": 10
+    },
+    "hosting": {
+      "provider": "Hostinger",
+      "web_server": "LiteSpeed",
+      "origin_ip": "82.29.158.129",
+      "php_version": "8.3.36",
+      "database_name": "u459389234_e8taL",
+      "database_size_mb": 726
+    },
+    "cms": {
+      "platform": "WordPress",
+      "core_version_audited": "6.9.9",
+      "core_version_target": "7.1.3",
+      "theme": "JNews 12.0.4",
+      "installed_plugins_count": 40
+    }
+  },
+  "security_audit_baseline": {
+    "document_code": "NS-LLN-AUD-001",
+    "path": "docs/03_auditorias_y_drift/NS-LLN-AUD-001_AUDITORIA_SEGURIDAD_Y_VULNERABILIDADES.md",
+    "threat_level": "CRITICAL",
+    "production_mutated": false,
+    "total_cves": 93,
+    "cve_breakdown": {
+      "wordpress_core": 28,
+      "active_plugins": 64,
+      "theme_jnews": 1
+    },
+    "critical_vulnerable_plugins": [
+      { "name": "Forminator", "version": "1.51.1", "cves": 38, "target": ">=1.57.3" },
+      { "name": "Complianz GDPR/CCPA", "version": "7.1.6", "cves": 13, "target": ">=7.5.6" },
+      { "name": "Elementor Website Builder", "version": "3.35.8", "cves": 6, "target": ">=4.3.5" },
+      { "name": "CMB2", "version": "2.11.0", "cves": 3 },
+      { "name": "MC4WP: Mailchimp for WP", "version": "4.12.0", "cves": 2 },
+      { "name": "Elementor Pro", "version": "3.35.1", "cves": 1, "target": ">=4.2.2" },
+      { "name": "GTM4WP", "version": "1.22.3", "cves": 1 }
+    ],
+    "perimeter_findings": [
+      "FortiGuard NRD block active on somoslalupanews.com",
+      "Public REST API user enumeration (/wp-json/wp/v2/users returns 91.3 KB)",
+      "Missing HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy",
+      "Insecure PHP flags: allow_url_fopen=On, expose_php=On, session.cookie_secure=Off, session.cookie_httponly=Off, log_errors=Off",
+      "DNS ftp A-record leaks origin IP 82.29.158.129; DMARC p=none; SPF ~all"
+    ]
+  },
+  "finance_and_commercial": {
+    "currency": "COP",
+    "cutoff_date": "2026-10-21",
+    "ledger": {
+      "cycle_1_due": 2500000,
+      "cycle_2_due": 500000,
+      "cycle_2_paid": 2000000,
+      "domain_fund_received": 200000,
+      "domain_registration_cost": 50000,
+      "client_credit_domain_fund": 150000,
+      "net_balance_receivable": 2850000
+    },
+    "active_quotation_code": "PROP-2026-LLN-SEC03",
+    "quotation_tiers_cop": {
+      "level_1a_unlock_dns": 380000,
+      "level_1b_investor_ready_bmv": 580000,
+      "level_2_full_remediation_93_cves": 3600000,
+      "level_3_devsecops_90d": 5400000,
+      "level_4_custom_backend_no_wp": 9800000
+    }
+  },
+  "workstations_sync": {
+    "hosts": [
+      { "host_id": "HOST-01-STUDIO", "label": "Desktop Principal (NOMACK)", "role": "primary" },
+      { "host_id": "HOST-02-MOBILE", "label": "Laptop Nitro", "role": "mobile_sync" }
+    ],
+    "sync_protocol_doc": "docs/01_gobernanza/NS-LLN-GOV-003_PROTOCOLO_SEGURIDAD_Y_SINCRONIZACION.md",
+    "sync_script": "scripts/sync_workstation.ps1",
+    "secrets_vault_gitignored": ".secrets/"
+  },
+  "adrs": [
+    "ADR-LLN-001: Acquire somoslalupanews.com via GoDaddy",
+    "ADR-LLN-002: Enforce #2d124d + #b8842a client brand palette",
+    "ADR-LLN-003: Non-invasive 93-CVE audit & 4-tier commercial quote PROP-2026-LLN-SEC03",
+    "ADR-LLN-004: Decouple into projects/la-lupa-news with ISO 9001 Cl. 7.5 4-folder docs taxonomy",
+    "ADR-LLN-005: Isolate secrets in .secrets/ and 6.98 GB cold backups off-Git (ISO 27001 A.8.12)",
+    "ADR-LLN-006: Dual persistent memory (in-project JSON+FTS5 SQLite + global codebase_memory.sqlite)"
+  ],
+  "next_actions": [
+    "Clone Nomackleo/somos-la-lupa-news into projects/la-lupa-news on Laptop Nitro (HOST-02-MOBILE)",
+    "Await HITL Gate 1 commercial approval from Javier Fernández Franco on PROP-2026-LLN-SEC03",
+    "Execute Phase 1 remediation only after Gate 1 approval and fresh verified backup"
+  ]
+}

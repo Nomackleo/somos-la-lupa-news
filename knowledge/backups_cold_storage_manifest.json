@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "document_ref": "NS-LLN-GOV-003",
+  "iso_control": "ISO/IEC 27001:2022 A.8.12 & A.8.13 (Data Leakage Prevention & Information Backup)",
+  "policy": "RESTRICTED_OFF_GIT — Raw server backups, SQL dumps, and credentials MUST NEVER enter GitHub or SQLite LLM memory indexes.",
+  "cold_storage_host": "HOST-01-STUDIO (NOMACK)",
+  "cold_storage_root": "D:\\Work\\lalupanews\\05_Servidor_Backups\\",
+  "local_secrets_vault": "projects/la-lupa-news/.secrets/ (gitignored, excluded from all indexers)",
+  "audited_date_utc": "2026-11-23T15:00:00Z",
+  "total_cold_archive_gb": 6.98,
+  "secrets_vault_inventory_names_only": [
+    "El cantante de el Gol(2).xlsx",
+    "lln_db_pass.txt",
+    "wp.txt"
+  ],
+  "cpanel_backups_inventory": [
+    { "name": "backup-1.17.2025_13-54-39_pronotic.tar", "type": "dir_or_tar", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "backup-1.17.2025_13-54-39_pronotic.tar.gz", "type": "archive", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "backup-1.27.2025_21-39-37_pronotic.tar", "type": "dir_or_tar", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "backup-1.27.2025_21-39-37_pronotic.tar.gz", "type": "archive", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "backup-pronoticias.com.co-1-28-2025.tar.gz", "type": "archive", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "caida/", "type": "extracted_wordpress_incident_dump", "contains_wp_config": true, "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "la_lupa_news-old/", "type": "legacy_zip_archives", "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "la_lupa_news_db/lalupanews_db.sql", "type": "sql_dump", "size_mb": 10.71, "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "lalupanews.rar", "type": "archive", "size_mb": 68.74, "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "lalupanews.zip", "type": "archive", "size_mb": 73.40, "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "pronotic_lln_db.sql", "type": "sql_dump", "size_mb": 75.50, "classification": "RESTRICTED_OFF_GIT" },
+    { "name": "pronotic_lln_db.sql.gz", "type": "sql_dump_gz", "size_mb": 6.66, "classification": "RESTRICTED_OFF_GIT" }
+  ]
+}

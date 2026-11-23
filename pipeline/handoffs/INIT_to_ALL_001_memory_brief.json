@@ -1,0 +1,69 @@
+{
+  "contract_id": "INIT_to_ALL_001_memory_brief",
+  "project_id": "la-lupa-news",
+  "source_agent": "ISO_PROJECT_GOVERNANCE_ARCHITECT",
+  "target_agent": "ALL",
+  "timestamp_utc": "2026-11-23T15:00:00Z",
+  "gate_id": "GATE_0_PASSED",
+  "status": "ACTIVE_BASELINE",
+  "hitl_confirmed": true,
+  "iso_refs": [
+    "ISO 9001:2015 Cl. 7.1.6",
+    "ISO 9001:2015 Cl. 7.5",
+    "ISO/IEC 27001:2022 A.5.8 & A.8.12",
+    "ISO/IEC 25010:2023",
+    "ISO/IEC 42001:2023"
+  ],
+  "artifacts": [
+    "AGENTS.md",
+    "GEMINI.md",
+    "docs/README.md",
+    "docs/01_gobernanza/NS-LLN-GOV-001_PLAN_MAESTRO_Y_GOBERNANZA_ISO.md",
+    "docs/01_gobernanza/NS-LLN-GOV-002_MANUAL_ESTETICA_Y_UI_DOCUMENTAL.md",
+    "docs/01_gobernanza/NS-LLN-GOV-003_PROTOCOLO_SEGURIDAD_Y_SINCRONIZACION.md",
+    "docs/02_especificaciones/NS-LLN-SPEC-001_ARQUITECTURA_PORTAL_Y_ESQUEMA.md",
+    "docs/03_auditorias_y_drift/NS-LLN-AUD-001_AUDITORIA_SEGURIDAD_Y_VULNERABILIDADES.md",
+    "docs/04_bitacora_cambios/NS-LLN-CHG-001_BITACORA_MIGRACION_Y_ESTANDARIZACION_ISO.md",
+    "docs/04_bitacora_cambios/NS-LLN-MEM-001_MEMORIA_PERSISTENTE_LA_LUPA_NEWS.md",
+    "knowledge/project_memory.json",
+    "knowledge/project_memory.sqlite",
+    "knowledge/backups_cold_storage_manifest.json",
+    "scripts/update_project_memory.py",
+    "scripts/sync_workstation.ps1"
+  ],
+  "payload": {
+    "brief_first_sequence": [
+      "pipeline/PROJECT_BUS.json",
+      "knowledge/project_memory.json",
+      "docs/04_bitacora_cambios/NS-LLN-MEM-001_MEMORIA_PERSISTENTE_LA_LUPA_NEWS.md"
+    ],
+    "client_facing_style_invariants": {
+      "client": "La Lupa News",
+      "ceo": "Javier Fernández Franco",
+      "author": "Leonel Salcedo — Dirección y Consultoría Tecnológica",
+      "primary_hex": "#2d124d",
+      "accent_hex": "#b8842a",
+      "forbidden": [
+        "#1a3a5c",
+        "Daniel Moncada",
+        "Nomack (in client-facing deliverables)"
+      ]
+    },
+    "security_posture_summary": {
+      "domain_active": "somoslalupanews.com (GoDaddy, FortiGuard NRD blocked)",
+      "server": "Hostinger LiteSpeed PHP 8.3.36 / WordPress 6.9.9 / JNews 12.0.4",
+      "documented_cves": 93,
+      "production_lock": "NO_CHANGES_UNTIL_GATE_1_CLIENT_APPROVAL",
+      "secrets_policy": "All credentials strictly inside gitignored .secrets/; 6.98 GB cold backups cataloged off-Git."
+    },
+    "commercial_and_finance_summary": {
+      "net_receivable_cop": 2850000,
+      "active_quotation": "PROP-2026-LLN-SEC03 ($380k / $580k / $3.6M / $5.4M / $9.8M COP)"
+    },
+    "multi_host_sync": {
+      "remote": "https://github.com/Nomackleo/somos-la-lupa-news.git",
+      "hosts": ["HOST-01-STUDIO (Desktop)", "HOST-02-MOBILE (Laptop Nitro)"],
+      "helper": "scripts/sync_workstation.ps1"
+    }
+  }
+}
